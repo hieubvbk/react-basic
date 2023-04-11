@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.scss';
-import MyComponent from './Example/MyComponent';
+// import MyComponent from './Example/MyComponent';
+import ListToDo from './ToDos/ListToDo';
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
         <p>
           Hello World!
         </p>
-        <MyComponent/>
+        {/* <MyComponent/> */}
+        <ListToDo/>
       </header>
     </div>
   );
