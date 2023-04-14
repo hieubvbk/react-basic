@@ -1,0 +1,34 @@
+1. Tạo project
+npx create-react-app my-app
+
+2. Kết nối với git server
+git remote add origin https://github.com/hieubvbk/react-basic.git
+
+3. Push lên server
+git push origin master
+
+4. Clone 
+git clone https://github.com/hieubvbk/react-basic.git
+
+5. Thứ tự load : index.html --> index.js --> app.js
+
+6. Cài đặt thư viện: scss
+npm i --save sass
+
+toastify
+npm i react-toastify
+
+7. 2 loại component
+	Class component
+	Function component
+Sử dụng cú phám JSX để xây dựng component
+
+8. cài react-router
+npm install --save-exact react-router-dom@5.3.0
+
+fix lỗi  could-not-find-a-declaration-file-for-module-react
+npm install @types/react-dom @types/react-router-dom --save-dev
+Go cai dat v18
+npm uninstall react react-dom
+Dowgrade version react
+npm install react@17.0.2 react-dom@17.0.2
