@@ -1,37 +1,34 @@
-// import logo from './logo.svg';
+import logo from './logo.svg';
 import './App.scss';
 import MyComponent from './Example/MyComponent';
-import ListToDo from './ToDos/ListToDo';
+import ListTodo from './ToDos/ListToDo';
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Nav from './Nav/Nav';
 import Home from './Example/Home';
 import {
-  BrowserRouter,
+  BrowserRouter as Router,
   Switch,
-  Route,
-  Link,
-  useRouteMatch,
-} from "react-router-dom";
+  Route
+} from 'react-router-dom';
 
 function App() {
   return (
-    <BrowserRouter>
-    <div className="App">
-      <Nav/>
-      <header className="App-header">
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/ToDos">
-            <ListToDo/>
-          </Route>
-          <Route path="/About">
-            <MyComponent/> 
-          </Route>
-        </Switch>
-      </header>
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          <Nav />
+          <img src={logo} className="App-logo" alt="logo" />
+          <Switch>
+            <Route exact path="/" component={Home}>
+            </Route>
+            <Route path="/todo" component={ListTodo}>
+            </Route>
+            <Route path="/about" component={MyComponent}>
+            </Route>
+          </Switch>
+
+        </header>
       <ToastContainer
         position="top-right"
         autoClose={5000}
@@ -45,7 +42,7 @@ function App() {
         theme="colored"
         />
     </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 

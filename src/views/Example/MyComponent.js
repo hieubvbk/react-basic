@@ -13,8 +13,8 @@ class MyComponent extends React.Component {
 
     addNewJob = (job) => {
         console.log("id:", job.id, ", jobsTitle: ", job.jobsTitle, ", salary: ", job.salary);
-        let currentJobs = this.state.arrJobs;
-        currentJobs.push(job);
+        // let currentJobs = this.state.arrJobs;
+        // currentJobs.push(job);
         this.setState ({
             // arrJobs: currentJobs
             arrJobs: [...this.state.arrJobs, job]
